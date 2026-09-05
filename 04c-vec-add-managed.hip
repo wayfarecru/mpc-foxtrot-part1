@@ -54,8 +54,11 @@ int main(int argc, const char* argv[]) {
 	hipMemAdvise(managedPtrC, N * sizeof(float), hipMemAdviseSetPreferredLocation, devId);
 #endif
 	// CPU part: set values
+	printf("generating %d random numbers: ", N);
+	fflush(stdout);
 	setRand(N, managedPtrA);
 	setRand(N, managedPtrB);
+	printf("done\n");
 	printf("A[%d] = ", N);
 	printArray(N, managedPtrA);
 	printf("B[%d] = ", N);
@@ -93,4 +96,4 @@ int main(int argc, const char* argv[]) {
 }
 
 // HISTORY: vec-add-managed.cu <-- vec-add-big.cu <-- rand-vec-add.cu <-- chrono-vec-add.cu <-- vec-add.cu
-static const char rcsid[] __attribute__((used)) = "$Id: 04c-vec-add-managed.cu,v 1.3 2026/08/29 02:14:31 wayfarecru Exp $";
+static const char rcsid[] __attribute__((used)) = "$Id: 04c-vec-add-managed.cu,v 1.5 2026/09/05 08:49:13 wayfarecru Exp $";

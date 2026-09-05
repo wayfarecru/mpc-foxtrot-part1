@@ -57,7 +57,7 @@ int main(int argc, const char* argv[]) {
 	fflush(stdout);
 	setRand(N, managedPtrA);
 	setRand(N, managedPtrB);
-	prinff("done\n");
+	printf("done\n");
 	printf("A[%d] = ", N);
 	printArray(N, managedPtrA);
 	printf("B[%d] = ", N);
@@ -95,4 +95,4 @@ int main(int argc, const char* argv[]) {
 }
 
 // HISTORY: vec-add-managed.cu <-- vec-add-big.cu <-- rand-vec-add.cu <-- chrono-vec-add.cu <-- vec-add.cu
-static const char rcsid[] __attribute__((used)) = "$Id: 04c-vec-add-managed.cu,v 1.4 2026/08/29 02:48:36 wayfarecru Exp $";
+static const char rcsid[] __attribute__((used)) = "$Id: 04c-vec-add-managed.cu,v 1.5 2026/09/05 08:49:13 wayfarecru Exp $";
